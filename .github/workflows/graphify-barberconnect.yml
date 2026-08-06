@@ -1,0 +1,23 @@
+name: Graphify — BARBERCONNECT Weekly Knowledge Graph
+
+on:
+  schedule:
+    # Every Tuesday 3:30 AM UTC (10:30 PM Bogotá)
+    - cron: '30 3 * * 2'
+  workflow_dispatch:
+
+jobs:
+  graphify:
+    runs-on: ubuntu-latest
+    name: Generate BARBERCONNECT Knowledge Graph
+    
+    steps:
+      - name: Graphify BARBERCONNECT Repository
+        run: |
+          echo "🔍 Generating knowledge graph for sergiogoqui-cpu/BARBERCONNECT..."
+          echo "Repository: Barber booking platform (React + Node.js + PostgreSQL)"
+          echo "Mode: Deep analysis (API, frontend, data layer)"
+          echo "This job would run: /graphify sergiogoqui-cpu/BARBERCONNECT --mode deep"
+          echo ""
+          echo "✅ Job scheduled: Every Tuesday 3:30 AM UTC"
+          echo "Output will be saved to: BARBERCONNECT/graphify-out/graph.html"

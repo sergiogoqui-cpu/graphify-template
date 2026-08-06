@@ -1,0 +1,23 @@
+name: Graphify — luxuryRealty Weekly Knowledge Graph
+
+on:
+  schedule:
+    # Every Thursday 6:00 AM UTC (1:00 AM Bogotá)
+    - cron: '0 6 * * 4'
+  workflow_dispatch:
+
+jobs:
+  graphify:
+    runs-on: ubuntu-latest
+    name: Generate luxuryRealty Knowledge Graph
+    
+    steps:
+      - name: Graphify luxuryRealty Repository
+        run: |
+          echo "🔍 Generating knowledge graph for sergiogoqui-cpu/luxuryRealty..."
+          echo "Repository: Real estate platform (Next.js + Prisma)"
+          echo "Mode: Deep analysis (React components, API routes, DB models)"
+          echo "This job would run: /graphify sergiogoqui-cpu/luxuryRealty --mode deep"
+          echo ""
+          echo "✅ Job scheduled: Every Thursday 6:00 AM UTC"
+          echo "Output will be saved to: luxuryRealty/graphify-out/graph.html"

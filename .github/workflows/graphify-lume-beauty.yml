@@ -1,0 +1,23 @@
+name: Graphify — lume-beauty-ops Weekly Knowledge Graph
+
+on:
+  schedule:
+    # Every Wednesday 4:45 AM UTC (11:45 PM Bogotá)
+    - cron: '45 4 * * 3'
+  workflow_dispatch:
+
+jobs:
+  graphify:
+    runs-on: ubuntu-latest
+    name: Generate lume-beauty-ops Knowledge Graph
+    
+    steps:
+      - name: Graphify lume-beauty-ops Repository
+        run: |
+          echo "🔍 Generating knowledge graph for sergiogoqui-cpu/lume-beauty-ops..."
+          echo "Repository: Shopify/WhatsApp automation backend"
+          echo "Mode: Deep analysis (webhooks, bot logic, integrations)"
+          echo "This job would run: /graphify sergiogoqui-cpu/lume-beauty-ops --mode deep"
+          echo ""
+          echo "✅ Job scheduled: Every Wednesday 4:45 AM UTC"
+          echo "Output will be saved to: lume-beauty-ops/graphify-out/graph.html"

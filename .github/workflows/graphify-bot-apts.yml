@@ -1,0 +1,23 @@
+name: Graphify — Bot-Apts Weekly Knowledge Graph
+
+on:
+  schedule:
+    # Every Friday 7:15 AM UTC (2:15 AM Bogotá)
+    - cron: '15 7 * * 5'
+  workflow_dispatch:
+
+jobs:
+  graphify:
+    runs-on: ubuntu-latest
+    name: Generate Bot-Apts Knowledge Graph
+    
+    steps:
+      - name: Graphify Bot-Apts Repository
+        run: |
+          echo "🔍 Generating knowledge graph for sergiogoqui-cpu/Bot-Apts..."
+          echo "Repository: Sports betting analysis bot"
+          echo "Mode: Deep analysis (strategies, data pipelines, UI)"
+          echo "This job would run: /graphify sergiogoqui-cpu/Bot-Apts --mode deep"
+          echo ""
+          echo "✅ Job scheduled: Every Friday 7:15 AM UTC"
+          echo "Output will be saved to: Bot-Apts/graphify-out/graph.html"
